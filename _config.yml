@@ -1,4 +1,4 @@
-url: lyvra.xyz
+url: "https://www.klara-theme.netlify.app"
 title: klara
 description: >-
     Hi, I am Klara, a minimalistic and elegant website designed to showcase your content with clarity and style.
@@ -11,16 +11,11 @@ subscribe-link: /feed.xml
 
 # Socials
 
-twitter:
-  username:
-  card: summary
-  creator: #yourusername
-author:
-  twitter: #yourusername
-  name: #yourusername
-  avatar:
-  email: #youremail
-  url: #yoururl
+social:
+  name: "klara"
+  links:
+    - "https://mastodon.com/yourhandle"
+    - "https://github.com/yourhandle"
 
 # Add Plugins
 

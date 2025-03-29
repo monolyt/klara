@@ -1,0 +1,23 @@
+---
+layout: page
+---
+
+<section class="archive" aria-labelledby="archive-heading">
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year_group in posts_by_year %}
+    <div class="archive__year-group">
+        <h2>{{ year_group.name }}</h2>
+        <ul class="posts__list">
+            {% for post in year_group.items %}
+            <li class="posts__item">
+                <a href="{{ post.url | relative_url }}">
+                    <span class="datebox" aria-label="Published {{ post.date | date: '%B %d, %Y' }}">{{ post.date |
+                        date: '%Y–%b–%d' }}</span>
+                </a>
+                <a class="posts__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</section>

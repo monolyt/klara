@@ -1,0 +1,81 @@
+url: lyvra.xyz
+title: klara
+description: >-
+    Hi, I am Klara, a minimalistic and elegant website designed to showcase your content with clarity and style.
+
+# Subscribe Banner
+
+show-subscribe-banner: true
+subscribe-banner-word: SUBSCRIBE
+subscribe-link: /feed.xml
+
+# Socials
+
+twitter:
+  username:
+  card: summary
+  creator: #yourusername
+author:
+  twitter: #yourusername
+  name: #yourusername
+  avatar:
+  email: #youremail
+  url: #yoururl
+
+# Add Plugins
+
+plugins:
+  - webrick
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-gzip
+
+# Clean Code Output
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  style: compressed
+
+highlighter: none
+
+# Exclude from Build
+
+exclude:
+  - .jekyll-cache
+
+# Define Collections
+
+permalink: pretty
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+
+# Define defaults
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

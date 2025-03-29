@@ -1,0 +1,13 @@
+<header class="site-header">
+    <a class="site-header__logo" href="{{ site.baseurl }}/">
+        <h1 class="site-header__title">{{site.title}}</h1>
+        <!--add style="display: none;" to the h1 if a logo img/svg is used-->
+        <!--Insert img/svg here-->
+    </a>
+    <nav class="site-header__nav">
+        {% for item in site.data.navigation.links %}
+        <a href="{{ item.url }}" class="site-header__nav-link">{{ item.title }}</a>
+        {% endfor %}
+        <a href="#" class="site-header__nav-link" id="theme-toggle">Light</a>
+    </nav>
+</header>

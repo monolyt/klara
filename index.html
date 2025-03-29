@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<section id="description">
+    {{ site.description }}
+</section>
+
+<section id="latest-posts">
+    <h3 class="posts__title">Latest posts</h3>
+    <ul class="posts__list">
+        {% assign recent_posts = site.posts | slice: 0, 10 %}
+        {% for post in recent_posts %}
+        <li class="posts__item">
+            <a href="{{ post.url | relative_url }}">
+                <span class="datebox" aria-label="Published {{ post.date | date: '%B %d, %Y' }}">{{ post.date |
+                    date: '%Y–%b–%d' }}</span></a>
+            <a class="posts__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% if site.show-subscribe-banner %}
+<section class="subscribe">
+    <a class="subscribe__link" href="{{site.subscribe-link}}">
+        <div class="subscribe__inner">
+            <span class="subscribe__content">{{site.subscribe-banner-word}} • {{site.subscribe-banner-word}} •
+                {{site.subscribe-banner-word}} •</span>
+            <span class="subscribe__content">{{site.subscribe-banner-word}} • {{site.subscribe-banner-word}} •
+                {{site.subscribe-banner-word}} •</span>
+        </div>
+    </a>
+</section>
+{% endif %}

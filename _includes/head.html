@@ -1,0 +1,36 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        {% if page.title %}{{ page.title }} | {{ site.title }}
+        {% else %}{{ site.title }}{% endif %}
+    </title>
+
+    <style>
+        {% capture include_to_scssify %}
+          {% include inline.scss %}
+        {% endcapture %}
+        {{ include_to_scssify | scssify }}
+    </style>
+
+    <!-- Prevent FOUC -->
+    <style>
+        html {
+            visibility: hidden;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+    </style>
+    <script>
+        (function () {
+            const userPref = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', userPref);
+            document.documentElement.style.visibility = 'visible';
+        })();
+    </script>
+    {% include analytics.html %}
+</head>

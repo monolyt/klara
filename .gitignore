@@ -1,0 +1,15 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Site output
+_site/
+_site/*
+*.gem
+.jekyll-cache/
+
+# Bundler dependencies
+/vendor/bundle/
+/vendor/cache/
+/vendor/gems/
+/vendor/ruby/

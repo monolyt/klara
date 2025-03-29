@@ -1,0 +1,19 @@
+/* ===== Variables ===== */
+:root {
+    --color-text: #0A0A0A;
+    --color-background: #F8F8F8;
+    --color-links: #005BBB;
+    --color-text-secondary: #666666;
+    --color-background-secondary: #E5E5E5;
+    --color-selection: #FFEB99;
+    --font-sansserif: 'InterVariable', Inter, sans-serif;
+}
+
+:root[data-theme="dark"] {
+    --color-text: #F0F0F0;
+    --color-background: #000000;
+    --color-links: #41A4FF;
+    --color-text-secondary: #B0B0B0;
+    --color-background-secondary: #1F1F1F;
+    --color-selection: #0057B870;
+}

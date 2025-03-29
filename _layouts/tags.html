@@ -1,0 +1,17 @@
+---
+layout: default
+title: All Tags
+---
+
+<section class="posts">
+	{% assign tags = site.tags | sort %}
+	<ul>
+		{% for tag in tags %}
+		<li>
+			<a href="{{ '/tag/' | append: tag[0] | relative_url }}" title="Posts tagged with '{{ tag[0] }}'">
+				#{{ tag[0] | replace: '-', ' '}} ({{ tag | last | size }})
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
